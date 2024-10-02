@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
 
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GameProvider } from './context/GameContext';
+import Lobby from './pages/Lobby';
+import Game from './components/Game/Game';
+import Home from './pages/Home';
+import GameOver from './pages/GameOver';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GameProvider>
+      <Router>
+        <Routes>
+          <Route path="/lobby" element={<Lobby />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/game-over" element={<GameOver />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </GameProvider>
   );
-}
+};
 
 export default App;

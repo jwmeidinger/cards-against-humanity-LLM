@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# AI Cards Against Humanity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to AI Cards Against Humanity, an AI-driven party game that combines the classic Cards Against Humanity gameplay with the power of artificial intelligence!
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [AI Cards Against Humanity](#ai-cards-against-humanity)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+  - [How to Play](#how-to-play)
+  - [Game Rules](#game-rules)
+  - [Technical Details](#technical-details)
+  - [Configuration Options](#configuration-options)
+  - [Contributing](#contributing)
+  - [Connect with Us](#connect-with-us)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Create and join game lobbies
+- AI-generated cards for endless variety
+- Customizable game settings
+- Support for bot players
+- Multiple AI providers and models
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create/Update .env to have `FAUNA_SECRET` and if using groq update that key as well.
+4. Start the development server: `netlify dev`
+5. Open your browser and navigate to `http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Play
 
-### `npm run build`
+1. On the home page, enter your name and either create a new game or join an existing one using a game code.
+2. In the lobby, the host can configure game settings and add bot players.
+3. Once the game starts, take turns being the judge and selecting the funniest card combinations.
+4. The first player to reach the winner count wins the game!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Game Rules
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Each round, a black card with a prompt is displayed.
+- Players submit their funniest white card to complete the prompt.
+- The judge selects the best submission, awarding a point to the winner.
+- The first player to reach the winner count wins the game.
+- New cards are generated every game.
+- If you add a bot player, the name will be used to pick cards!
+- Relax, have fun, and let your creativity shine!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technical Details
 
-### `npm run eject`
+- Built with React and TypeScript
+- Uses React Router for navigation
+- Implements a GameContext for state management
+- Utilizes Netlify Functions for server-side operations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Configuration Options
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The host can configure the following game settings:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Theme (Random, Technology, Movies, Sports, Science)
+- Max Rounds
+- Winner Count
+- AI Provider (Groq, OpenAI, Anthropic)
+- AI Model (varies by provider)
+- API Key (for non-Groq providers)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributing
 
-## Learn More
+We welcome contributions to improve AI Cards Against Humanity! Please feel free to submit issues or pull requests.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Connect with Us
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Follow me on [X.com](https://x.com/J0rdanMeidinger) for other projects!
+- Connect on [LinkedIn](https://www.linkedin.com/in/jwmeidinger/) for hiring.
+- Check out the other dumb projects on [GitHub](https://github.com/jwmeidinger)
+- Don't sue us and check out the [Card Game OGs](https://www.cardsagainsthumanity.com/)
+
+---
+
+Enjoy playing AI Cards Against Humanity! Remember, it's all in good fun!

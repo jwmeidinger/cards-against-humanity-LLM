@@ -1,0 +1,43 @@
+/* Shared theme styles for the application */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #00ff99;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Common classes */
+.button {
+  padding: 10px 20px;
+  background-color: #000033;
+  color: #6699ff;
+  border: 2px solid #6699ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button:hover {
+  background-color: #000066;
+}
+
+.input-field {
+  padding: 10px;
+  background-color: #0d0d0d;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.label {
+  font-size: 1.2em;
+}

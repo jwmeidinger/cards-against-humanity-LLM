@@ -1,0 +1,456 @@
+/* Import the shared theme */
+@import './theme.css';
+
+/* Game container */
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Game title */
+.game-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Black card styling */
+.black-card {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.2em;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.black-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.black-card p {
+  margin: 0;
+}
+
+/* Player hand */
+.player-hand {
+  margin: 20px 0;
+}
+
+.player-hand-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.player-hand-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-card {
+  background-color: #fff;
+  color: #000;
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.player-card.selected {
+  border: 3px solid #00ff99;
+  transform: translateY(-10px);
+}
+
+.player-card p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Submissions */
+.submissions {
+  margin: 20px 0;
+}
+
+.submissions-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.submission-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.submission-card {
+  background-color: #fff;
+  color: #000;
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submission-card.selected {
+  border: 3px solid #00ff99;
+  transform: translateY(-10px);
+}
+
+.submission-card p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-winner-button {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Player Scores */
+.player-scores {
+    margin: 20px auto; /* Centered on the page */
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+
+.player-scores-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.player-scores-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-score-item {
+  margin: 5px 0;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: #0d0d0d;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.player-score-item.rank-1 {
+  background-color: gold;
+  color: #000;
+}
+
+.player-score-item.rank-2 {
+  background-color: silver;
+  color: #000;
+}
+
+.player-score-item.rank-3 {
+  background-color: #cd7f32; /* Bronze */
+  color: #000;
+}
+
+.player-name {
+  font-weight: bold;
+}
+
+.player-score {
+  font-style: italic;
+}
+
+/* Previous Round Results */
+.previous-round-results {
+  margin: 20px 0;
+}
+
+.previous-round-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.czar {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #dd06f9;
+  }
+
+/* Previous Round Black Card */
+.previous-black-card-container {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.black-card.small {
+  max-width: 400px;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.black-card.small::before {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+}
+
+.previous-submissions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.previous-submission {
+  background-color: #fff;
+  color: #000;
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.previous-submission.winner {
+  border: 3px solid gold;
+}
+
+.submission-player-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.submission-card-text {
+  font-size: 1em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+
+.winner-label {
+  color: gold;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Game instruction */
+.game-instruction {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+/* Game judge */
+.game-judge {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Timer */
+.game-timer {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #ffcc00; /* Complementary golden color */
+}
+
+/* Submit button */
+.game-submit-button {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Increase Card Size */
+  .player-card,
+  .submission-card,
+  .previous-submission {
+    width: 180px;
+    height: 240px;
+  }
+
+  /* Reduce Font Size */
+  .player-card p,
+  .submission-card p,
+  .previous-submission p,
+  .submission-card-text {
+    font-size: 0.95em;
+    -webkit-line-clamp: 12;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further Increase Card Size */
+  .player-card,
+  .submission-card,
+  .previous-submission {
+    width: 200px;
+    height: 260px;
+  }
+
+  /* Slightly Reduce Font Size */
+  .player-card p,
+  .submission-card p,
+  .previous-submission p,
+  .submission-card-text {
+    font-size: 0.9em;
+    -webkit-line-clamp: 14;
+  }
+
+  /* Adjust Layout Margins */
+  .player-hand-cards,
+  .submission-cards,
+  .previous-submissions {
+    justify-content: center;
+  }
+
+  .player-card,
+  .submission-card,
+  .previous-submission {
+    margin: 5px;
+  }
+
+  /* Adjust Title Sizes */
+  .game-title,
+  .player-hand-title,
+  .submissions-title,
+  .player-scores-title,
+  .previous-round-title {
+    font-size: 1.2em;
+  }
+
+  /* Adjust Instruction Text */
+  .game-instruction,
+  .game-judge,
+  .game-timer {
+    font-size: 1em;
+  }
+}
+
+/* Ensure Text Fills the Card */
+.player-card p,
+.submission-card p,
+.previous-submission p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove Hover Effects on Mobile */
+@media (hover: none) {
+  .player-card:hover,
+  .submission-card:hover,
+  .previous-submission:hover {
+    transform: none;
+  }
+}
+
+/* Remove Button Inside Submission Card */
+.submission-card .button {
+  display: none;
+}
+
+/* Adjust Line Height for Readability */
+.player-card p,
+.submission-card p,
+.previous-submission p {
+  line-height: 1.2;
+}
+
+/* Adjustments to Buttons */
+.game-submit-button,
+.select-winner-button {
+  width: 200px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Center Buttons */
+.game-submit-button,
+.select-winner-button {
+  margin: 20px auto;
+}

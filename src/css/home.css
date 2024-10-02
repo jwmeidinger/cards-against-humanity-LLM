@@ -1,0 +1,122 @@
+/* Import the shared theme */
+@import './theme.css';
+
+/* Cyberpunk and retro-inspired styles for the Home page */
+
+.home-container {
+  max-width: 725px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0d0d0d;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.home-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+.home-input-section {
+  margin-bottom: 40px;
+}
+
+.home-section {
+  margin-bottom: 40px;
+}
+
+.home-section-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.home-input-field {
+  width: 60%;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+  background-color: #1a1a1a;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 4px;
+}
+
+.home-button {
+  width: 60%;
+  padding: 12px 0;
+}
+
+.home-rules-section {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+}
+
+.home-rules-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.home-rules-list {
+  padding-left: 20px;
+  text-align: left;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .home-title {
+    font-size: 2em;
+  }
+
+  .home-subtitle {
+    font-size: 1em;
+  }
+
+  .home-section-title {
+    font-size: 1.3em;
+  }
+}
+
+/* New styles for social links */
+.home-socials-section {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+}
+
+.home-socials-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.home-socials-list {
+  padding-left: 20px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.social-link {
+  color: #f50404;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #f5040465;
+}

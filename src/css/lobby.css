@@ -1,0 +1,174 @@
+/* Import the shared theme */
+@import './theme.css';
+
+/* Cyberpunk and retro-inspired styles for the Lobby page */
+
+.lobby-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0d0d0d;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.lobby-title {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+
+.lobby-copy-button {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.lobby-copy-success {
+  text-align: center;
+  margin-top: 10px;
+  color: #66ffcc;
+}
+
+.lobby-players-list {
+  margin-top: 30px;
+}
+
+.lobby-players-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #00ff99;
+}
+
+.lobby-player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #00ff99;
+  border-radius: 5px;
+}
+
+.lobby-player-item span {
+  font-size: 1.1em;
+}
+
+.lobby-remove-button {
+  background-color: #330000;
+  color: #ff0066;
+  border: 1px solid #ff0066;
+}
+
+.lobby-remove-button:hover {
+  background-color: #660000;
+}
+
+.lobby-settings-section {
+  margin-top: 30px;
+}
+
+.lobby-setting-item,
+.lobby-bot-section {
+  margin-bottom: 15px;
+}
+
+.lobby-bot-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.lobby-bot-section .lobby-input-group {
+  flex: 1;
+}
+
+.lobby-bot-section .lobby-add-bot-button {
+  margin-left: 10px;
+  margin-top: 28px;
+}
+
+.lobby-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.lobby-input-group label {
+  margin-bottom: 5px;
+}
+
+.lobby-input-field,
+.lobby-select-field {
+  padding: 8px;
+  background-color: #1a1a1a;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 4px;
+  font-size: 1em;
+  appearance: none; /* Remove default styling */
+}
+
+.lobby-select-field {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%204%205"><polygon%20points="2,0%200,5%204,5"%20fill="%2300ff99"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 10px 10px;
+}
+
+.lobby-start-game-button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 25px;
+  background-color: #003300;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+.lobby-start-game-button:disabled {
+  background-color: #1a1a1a;
+  color: #666;
+  border-color: #666;
+  cursor: not-allowed;
+}
+
+.lobby-start-game-button:hover:not(:disabled) {
+  background-color: #004d00;
+}
+
+.lobby-warning {
+  text-align: center;
+  color: #ff9933;
+  margin-top: 10px;
+}
+
+.lobby-error-message {
+  text-align: center;
+  color: #ff3333;
+  margin-top: 10px;
+}
+
+.lobby-note {
+  font-size: 0.9em;
+  color: #cccccc;
+  margin-top: 20px;
+}
+
+.lobby-input-field::placeholder,
+.lobby-select-field::placeholder {
+  color: #666;
+}
+
+/* Remove default select arrow */
+.lobby-select-field::-ms-expand {
+  display: none;
+}
+
+/* Adjust for Firefox */
+@-moz-document url-prefix() {
+  .lobby-select-field {
+    background-image: none;
+  }
+}
