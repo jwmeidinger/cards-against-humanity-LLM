@@ -27,6 +27,8 @@ const Lobby: React.FC = () => {
 
   const [startGameError, setStartGameError] = useState('');
 
+  const [isStartingGame, setIsStartingGame] = useState<boolean>(false);
+
   const themes = [
     'Random',
     'Technology',
@@ -200,7 +202,8 @@ const Lobby: React.FC = () => {
 
   // Start the game (host only)
   const handleStartGame = async () => {
-    setStartGameError(''); // Clear previous errors
+    setStartGameError('');
+    setIsStartingGame(true);
     try {
       const updatedGameState: Partial<GameState> = { 
         ...gameState, 
@@ -232,6 +235,8 @@ const Lobby: React.FC = () => {
     } catch (error) {
       console.error('Error in handleStartGame:', error);
       setStartGameError('An error occurred while starting the game. Please try again or check your API key.');
+    } finally {
+      setIsStartingGame(false);
     }
   };
 
@@ -461,13 +466,24 @@ const Lobby: React.FC = () => {
             Note: Your API key is stored locally in your browser and is not saved on our servers.
             Please ensure you have the correct key for the selected provider.
           </p>
-          <button className="lobby-start-game-button" onClick={handleStartGame} disabled={!canStartGame}>
-            Start Game
+          {/* Updated the button to disable when starting */}
+          <button
+            className="lobby-start-game-button"
+            onClick={handleStartGame}
+            disabled={!canStartGame || isStartingGame}
+          >
+            {isStartingGame ? 'Starting...' : 'Start Game'}
           </button>
           {!canStartGame && (
             <p className="lobby-warning">You need at least 3 players and a valid API key to start the game.</p>
           )}
           {startGameError && <p className="lobby-error-message">{startGameError}</p>}
+          {/* NEW: Display loading indicator when starting the game */}
+          {isStartingGame && (
+            <div className="loading-indicator">
+              <p>Starting the game, please wait...</p>
+            </div>
+          )}
         </>
       )}
     </div>

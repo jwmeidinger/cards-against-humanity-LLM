@@ -172,3 +172,9 @@
     background-image: none;
   }
 }
+
+.loading-indicator {
+  margin-top: 20px;
+  font-size: 16px;
+  color: yellow;
+}

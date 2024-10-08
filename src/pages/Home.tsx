@@ -6,7 +6,7 @@ import { Player } from '../types/game';
 import '../css/home.css';
 
 const Home: React.FC = () => {
-  const { setGameState, player, setPlayer } = useContext(GameContext)!;
+  const { setGameState, setPlayer } = useContext(GameContext)!;
   const navigate = useNavigate();
   const [name, setName] = useState<string>('');
   const [gameCodeInput, setGameCodeInput] = useState<string>('');

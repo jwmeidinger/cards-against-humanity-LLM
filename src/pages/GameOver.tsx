@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { GameContext } from '../context/GameContext';
 import { useNavigate } from 'react-router-dom';
 import '../css/gameover.css'; // Import the CSS file
-import congratsGif from '../assets/congrats.gif'; // Import the image
 
 const GameOver: React.FC = () => {
   const { gameState, setGameState } = useContext(GameContext)!;

@@ -87,7 +87,6 @@ export const updateGameState = async (gameCode: string, gameState: GameState) =>
 export const startGame = async (gameCode: string): Promise<GameState | null> => {
   try {
     const apiKey = localStorage.getItem('apiKey');
-    console.debug("KEY PRINTING2 ::"+ apiKey)
     const response = await fetch(`${API_BASE_URL}/startGame`, {
       method: 'POST',
       headers: {
