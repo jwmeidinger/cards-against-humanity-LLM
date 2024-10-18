@@ -475,7 +475,7 @@ const Lobby: React.FC = () => {
             {isStartingGame ? 'Starting...' : 'Start Game'}
           </button>
           {!canStartGame && (
-            <p className="lobby-warning">You need at least 3 players and a valid API key to start the game.</p>
+            <p className="lobby-warning">You need at least 3 players/bots and a valid API key if not using Groq to start the game.</p>
           )}
           {startGameError && <p className="lobby-error-message">{startGameError}</p>}
           {/* NEW: Display loading indicator when starting the game */}
